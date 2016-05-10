@@ -10344,17 +10344,31 @@ Elm.Slides.make = function (_elm) {
          }
    });
    var slideBasicTemplate = F2(function (slideID,content) {
-      return A2($Html.div,_U.list([$Html$Attributes.$class("slide"),$Html$Attributes.id(slideID)]),_U.list([content]));
+      return A2($Html.div,_U.list([$Html$Attributes.$class("row"),$Html$Attributes.id(slideID)]),_U.list([content]));
    });
    var Slide = F3(function (a,b,c) {    return {title: a,number: b,html: c};});
    var slides = $Array.fromList(_U.list([A3(Slide,
-   "Cover",
-   0,
-   A2(slideBasicTemplate,
-   "slide-0",
-   A2($Html.div,
-   _U.list([]),
-   _U.list([A2($Html.h1,_U.list([]),_U.list([$Html.text("Elm - Rethinking UI")])),A2($Html.p,_U.list([]),_U.list([$Html.text("by David G. Shannon")]))]))))]));
+                                        "Cover",
+                                        0,
+                                        A2(slideBasicTemplate,
+                                        "slide-0",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("main-title")]),_U.list([$Html.text("Elm - Rethinking UI")]))
+                                                ,A2($Html.p,_U.list([]),_U.list([$Html.text("by David G. Shannon")]))]))))
+                                        ,A3(Slide,
+                                        "Index",
+                                        1,
+                                        A2(slideBasicTemplate,
+                                        "slide-1",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([]),_U.list([$Html.text("Index")]))
+                                                ,A2($Html.ul,
+                                                _U.list([]),
+                                                _U.list([A2($Html.li,_U.list([]),_U.list([$Html.text("Why Elm?")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("What is Elm?")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Demo")]))]))]))))]));
    return _elm.Slides.values = {_op: _op,Slide: Slide,slideBasicTemplate: slideBasicTemplate,slides: slides,getSlide: getSlide};
 };
 Elm.Main = Elm.Main || {};
@@ -10367,6 +10381,7 @@ Elm.Main.make = function (_elm) {
    $Basics = Elm.Basics.make(_elm),
    $Debug = Elm.Debug.make(_elm),
    $Html = Elm.Html.make(_elm),
+   $Html$Attributes = Elm.Html.Attributes.make(_elm),
    $Html$Events = Elm.Html.Events.make(_elm),
    $List = Elm.List.make(_elm),
    $Maybe = Elm.Maybe.make(_elm),
@@ -10389,9 +10404,13 @@ Elm.Main.make = function (_elm) {
       var wantedSlide = $List.filter(function (el) {    return el;});
       return A2($Html.div,
       _U.list([]),
-      _U.list([A2($Slides.getSlide,model.currentSlide,model.slides)
-              ,A2($Html.button,_U.list([A2($Html$Events.onClick,address,Back)]),_U.list([$Html.text("Back")]))
-              ,A2($Html.button,_U.list([A2($Html$Events.onClick,address,Next)]),_U.list([$Html.text("Next")]))]));
+      _U.list([A2($Html.main$,_U.list([$Html$Attributes.$class("container slides")]),_U.list([A2($Slides.getSlide,model.currentSlide,model.slides)]))
+              ,A2($Html.button,
+              _U.list([A2($Html$Events.onClick,address,Back),$Html$Attributes.$class("btn btn-default btn-back")]),
+              _U.list([$Html.text("Back")]))
+              ,A2($Html.button,
+              _U.list([A2($Html$Events.onClick,address,Next),$Html$Attributes.$class("btn btn-default btn-next")]),
+              _U.list([$Html.text("Next")]))]));
    });
    var initalModel = {slides: $Slides.slides,currentSlide: 0,previousSlide: 0};
    var main = $StartApp$Simple.start({model: initalModel,view: view,update: update});

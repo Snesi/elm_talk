@@ -14,7 +14,7 @@ type alias Slide =
 
 slideBasicTemplate : String -> Html -> Html
 slideBasicTemplate slideID content = 
-    div [ class "slide" 
+    div [ class "row" 
         , id slideID 
         ] 
         [ content 
@@ -29,9 +29,26 @@ slides =
             0
             ( slideBasicTemplate 
                 "slide-0"
-                ( div [] 
-                    [ h1 [ ] [ text "Elm - Rethinking UI" ]
+                ( section [ class "col-md-12" ] 
+                    [ h1 
+                        [ class "main-title" ] 
+                        [ text "Elm - Rethinking UI" ]
                     , p [ ] [ text "by David G. Shannon" ]
+                    ]
+                )
+            )
+        , Slide
+            "Index"
+            1
+            ( slideBasicTemplate
+                "slide-1"
+                ( section [ class "col-md-12" ]
+                    [ h1 [] [ text "Index" ]
+                    , ul [] 
+                        [ li [] [ text "Why Elm?" ]  -- Explain Evan's slides and the history of programming from js' point of view
+                        , li [] [ text "What is Elm?" ] -- Explain the iphone comparison 
+                        , li [] [ text "Demo" ] -- Show the buzzword bingo demo
+                        ]
                     ]
                 )
             ) 

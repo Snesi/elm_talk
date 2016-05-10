@@ -50,11 +50,22 @@ view address model =
     let
         wantedSlide = List.filter (\el -> el)
     in 
-    div [ ]
-        [ Slides.getSlide model.currentSlide model.slides 
-        , button [ onClick address Back ] [ text "Back" ]
-        , button [ onClick address Next ] [ text "Next" ]
+    div [] 
+        [ main' 
+            [ class "container slides" ]
+            [ Slides.getSlide model.currentSlide model.slides ]
+        , button 
+            [ onClick address Back
+            , class "btn btn-default btn-back" 
+            ] 
+            [ text "Back" ]
+        , button 
+            [ onClick address Next 
+            , class "btn btn-default btn-next"
+            ] 
+            [ text "Next" ]        
         ]
+    
     
     
 main : Signal Html

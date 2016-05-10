@@ -1,0 +1,30 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+.slides {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 100%;
+    text-align: center;
+}
+
+.btn-back, .btn-next {
+    position: fixed;
+    bottom: 0;
+}
+.btn-back {
+    left: 0;
+}
+.btn-next {
+    right: 0;
+}
+
+.main-title {
+    text-align: center;
+}
