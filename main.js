@@ -10357,18 +10357,194 @@ Elm.Slides.make = function (_elm) {
                                         _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("main-title")]),_U.list([$Html.text("Elm - Rethinking UI")]))
                                                 ,A2($Html.p,_U.list([]),_U.list([$Html.text("by David G. Shannon")]))]))))
                                         ,A3(Slide,
-                                        "Index",
+                                        "Me",
                                         1,
                                         A2(slideBasicTemplate,
                                         "slide-1",
                                         A2($Html.section,
                                         _U.list([$Html$Attributes.$class("col-md-12")]),
-                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("Index")]))
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("About me")]))
+                                                ,A2($Html.ul,
+                                                _U.list([]),
+                                                _U.list([A2($Html.li,_U.list([]),_U.list([$Html.text("Full Stack Dev")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Not an Elm expert")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Spanish-American")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Geek")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("@davidgshannon")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Snesi on Github")]))]))]))))
+                                        ,A3(Slide,
+                                        "Evan",
+                                        2,
+                                        A2(slideBasicTemplate,
+                                        "slide-1",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("About Evan Czaplicki")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.$class("img-responsive")
+                                                        ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "margin",_1: "10px auto"}]))
+                                                        ,$Html$Attributes.src("img/evan_czaplicki.jpg")]),
+                                                _U.list([]))
+                                                ,A2($Html.ul,
+                                                _U.list([]),
+                                                _U.list([A2($Html.li,
+                                                        _U.list([]),
+                                                        _U.list([$Html.text("Phd in Asynchronous Functional Reactive Programming for GUIs")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Creator of Elm")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Worked at Prezi")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Works at NoRedInk")]))]))]))))
+                                        ,A3(Slide,
+                                        "Evan vs Ben",
+                                        3,
+                                        A2(slideBasicTemplate,
+                                        "slide-1",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("About Evan Czaplicki")]))
+                                                ,A2($Html.h2,_U.list([]),_U.list([$Html.text("Not this guy")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.$class("img-responsive")
+                                                        ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "margin",_1: "10px auto"}]))
+                                                        ,$Html$Attributes.src("img/evan vs ben.jpg")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "Index",
+                                        4,
+                                        A2(slideBasicTemplate,
+                                        "slide-1",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("Content")]))
                                                 ,A2($Html.ul,
                                                 _U.list([]),
                                                 _U.list([A2($Html.li,_U.list([]),_U.list([$Html.text("Why Elm?")]))
                                                         ,A2($Html.li,_U.list([]),_U.list([$Html.text("What is Elm?")]))
-                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Demo")]))]))]))))]));
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Demo")]))]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        5,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history0.png"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        6,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history1.jpeg"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        7,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history2.jpeg"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        8,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history3.jpeg"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        9,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history4.png"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        10,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history5.png"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "History of Programming - as seen by JS",
+                                        11,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("History of Programming")]))
+                                                ,A2($Html.h2,_U.list([$Html$Attributes.$class("subtitle")]),_U.list([$Html.text("as seen from Javascript")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.src("img/history6.png"),$Html$Attributes.$class("img-responsive")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "What\'s the future",
+                                        12,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,
+                                                _U.list([$Html$Attributes.$class("title")]),
+                                                _U.list([$Html.text("What\'s the future of programming?")]))
+                                                ,A2($Html.h2,
+                                                _U.list([$Html$Attributes.$class("subtitle")]),
+                                                _U.list([$Html.text("Who\'s going to decide that future?")]))]))))
+                                        ,A3(Slide,
+                                        "What\'s the future",
+                                        12,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,
+                                                _U.list([$Html$Attributes.$class("title")]),
+                                                _U.list([$Html.text("Who\'s going to decide that future?")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.$class("img-responsive")
+                                                        ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "margin",_1: "10px auto"}]))
+                                                        ,$Html$Attributes.src("img/js_vs_fp.png")]),
+                                                _U.list([]))]))))
+                                        ,A3(Slide,
+                                        "What\'s the future",
+                                        12,
+                                        A2(slideBasicTemplate,
+                                        "slide-2",
+                                        A2($Html.section,
+                                        _U.list([$Html$Attributes.$class("col-md-12")]),
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("What\'s the future?")]))
+                                                ,A2($Html.img,
+                                                _U.list([$Html$Attributes.$class("img-responsive")
+                                                        ,$Html$Attributes.style(_U.list([{ctor: "_Tuple2",_0: "margin",_1: "10px auto"}]))
+                                                        ,$Html$Attributes.src("img/maintainability_vs_usability.jpg")]),
+                                                _U.list([]))]))))]));
    return _elm.Slides.values = {_op: _op,Slide: Slide,slideBasicTemplate: slideBasicTemplate,slides: slides,getSlide: getSlide};
 };
 Elm.Main = Elm.Main || {};
@@ -10417,7 +10593,7 @@ Elm.Main.make = function (_elm) {
               _U.list([$Html.text("Next")]))]));
    });
    var initalModel = {slides: $Slides.slides
-                     ,currentSlide: 0
+                     ,currentSlide: 12
                      ,previousSlide: 0
                      ,disableBack: true
                      ,disableNext: false

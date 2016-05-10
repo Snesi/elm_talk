@@ -23,7 +23,7 @@ type alias Model =
 initalModel : Model
 initalModel = 
     { slides = Slides.slides
-    , currentSlide = 0
+    , currentSlide = 12
     , previousSlide = 0
     , disableBack = True
     , disableNext = False
