@@ -8,6 +8,7 @@ body {
 }
 img {
     max-height: 530px;
+    margin: 0 auto;
 }
 .slides {
     position: absolute;
