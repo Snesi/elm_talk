@@ -1,18 +1,20 @@
-module Slides where
+module Slides exposing (slides, getSlide, Slide)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
-import String
 import Array exposing (..)
 
-type alias Slide = 
+
+type Msg = NoOp
+
+type alias Slide a = 
     { title : String
     , number : Int
-    , html : Html
+    , html : Html.Html a
     }
-    
 
-slideBasicTemplate : String -> Html -> Html
+
+slideBasicTemplate : String -> Html a -> Html a
 slideBasicTemplate slideID content = 
     div [ class "row" 
         , id slideID 
@@ -21,7 +23,7 @@ slideBasicTemplate slideID content =
         ]
 
     
-slides : Array Slide
+slides : Array (Slide a)
 slides =
     fromList 
         [ Slide 
@@ -265,7 +267,7 @@ slides =
             )
         , Slide
             "What's the future"
-            12
+            13
             ( slideBasicTemplate
                 "slide-2"
                 ( section [ class "col-md-12" ]
@@ -283,7 +285,7 @@ slides =
             )
         , Slide
             "What's the future"
-            12
+            14
             ( slideBasicTemplate
                 "slide-2"
                 ( section [ class "col-md-12" ]
@@ -301,7 +303,7 @@ slides =
             )
         , Slide
             "Elm principles"
-            12
+            15
             ( slideBasicTemplate
                 "slide-2"
                 ( section [ class "col-md-12" ]
@@ -320,7 +322,7 @@ slides =
             )
         , Slide
             "Elm principles"
-            12
+            16
             ( slideBasicTemplate
                 "slide-2"
                 ( section [ class "col-md-12" ]
@@ -338,7 +340,7 @@ slides =
             )
         , Slide
             "Elm principles"
-            12
+            17
             ( slideBasicTemplate
                 "slide-2"
                 ( section [ class "col-md-12" ]
@@ -355,13 +357,118 @@ slides =
                     ]
                 )
             )
+        , Slide
+            "What is Elm"
+            18
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "What is Elm?" ]
+                    , h2 
+                        []
+                        [ text "a Functional Reactive Programming Language with:" ]
+                    , ul [] 
+                        [ li [] [ text "Virtual Dom (aka React.js)" ]
+                        , li [] [ text "Unidirectional dataflow (aka Flux)" ] 
+                        , li [] [ text "Concise modern syntax" ]
+                        , li [] [ text "Immutable values" ]
+                        , li [] [ text "Stateless functions" ]
+                        ]
+                    ]
+                )
+            )
+        , Slide
+            "What is Elm"
+            19
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "What else?" ]
+                    , ul [] 
+                        [ li [] [ text "Elm is freakin fast" ]
+                        , li [] [ text "Same value for same input allows easy caching" ] 
+                        , li [] [ text "No runtime exceptions" ]
+                        , li [] [ text "No undefined is not a function!" ]
+                        , li [] [ text "No need for sourcemaps" ]
+                        ]
+                    ]
+                )
+            )
+        , Slide
+            "What is Elm"
+            20
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ div 
+                        [ class "row" ] 
+                        [ div 
+                            [ class "col-md-3 col-md-offset-2" 
+                            , style [("font-size", "40px")]
+                            ]
+                            [ text "ELM" ]
+                        , div
+                            [ class "col-md-1" 
+                            , style [("font-size", "40px")]
+                            ]
+                            [ text "~" ]
+                        , div
+                            [ class "col-md-3"
+                            , style [("font-size", "40px")] 
+                            ]
+                            [ p [] [ text "Flow.js" ]
+                            , p [] [ text "Immutable.js" ]
+                            , p [] [ text "React.js" ]
+                            , p [] [ text "Redux.js" ]
+                            ]
+                        ]
+                    ]
+                )
+            )
+        , Slide
+            "What's the future"
+            21
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "The complete package" ]
+                    , img 
+                        [ class "img-responsive" 
+                        , style [ ("margin", "10px auto") ]
+                        , src "img/elm_iphone.png" 
+                        ]
+                        [ ]
+                    ]
+                )
+            )
+        , Slide
+            "What's the future"
+            22
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "DEMO TUTORIAL" ]
+                    ]
+                )
+            )
             
         ]
     
-getSlide : Int -> Array Slide -> Html
+getSlide : Int -> Array (Slide a) -> Slide a
 getSlide index slides' = 
     case get index slides' of
         Just slide ->
-            slide.html
+            slide
         Nothing ->
-            h1 [] [text "404 Not Found"]
+            Slide 
+                "Not Found"
+                0
+                (h1 [] [text "404 Not Found"])
