@@ -299,6 +299,62 @@ slides =
                     ]
                 )
             )
+        , Slide
+            "Elm principles"
+            12
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "User-Focused Language" ]
+                    , ul [] 
+                        [ li [] [ text "Gradual Learning" ]
+                        , li [] [ text "Communication" ] 
+                        , li [] [ text "Culture" ]
+                        , li [] [ text "Usage-driven design" ]
+                        , li [] [ text "Tooling" ]
+                        ]
+                    ]
+                )
+            )
+        , Slide
+            "Elm principles"
+            12
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "Gradual Learning" ]
+                    , h2
+                        [  ]
+                        [ text "The StartApp module slowly teaches you the Elm Architecture" ]
+                    , h2
+                        [  ]
+                        [ text "Get ready for da code!" ]
+                    ]
+                )
+            )
+        , Slide
+            "Elm principles"
+            12
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "Tooling" ]
+                    , ul [] 
+                        [ li [] [ text "Time Travel Debugger" ]
+                        , li [] [ text "Package Manager" ] 
+                        , li [] [ text "Friendly Errors" ]
+                        , li [] [ text "Forced semver" ]
+                        , li [] [ text "Excellent docs and examples" ]
+                        ]
+                    ]
+                )
+            )
             
         ]
     

@@ -10581,10 +10581,10 @@ Elm.Slides.make = function (_elm) {
                                                 ,A2($Html.ul,
                                                 _U.list([]),
                                                 _U.list([A2($Html.li,_U.list([]),_U.list([$Html.text("Time Travel Debugger")]))
-                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Package Manager")]))
-                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Friendly Errors")]))
-                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Forced semver")]))
-                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Excellent docs and examples")]))]))]))))]));
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Communication")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Culture")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Usage-driven design")]))
+                                                        ,A2($Html.li,_U.list([]),_U.list([$Html.text("Tooling")]))]))]))))]));
    return _elm.Slides.values = {_op: _op,Slide: Slide,slideBasicTemplate: slideBasicTemplate,slides: slides,getSlide: getSlide};
 };
 Elm.Main = Elm.Main || {};
