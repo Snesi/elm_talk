@@ -10363,7 +10363,7 @@ Elm.Slides.make = function (_elm) {
                                         "slide-1",
                                         A2($Html.section,
                                         _U.list([$Html$Attributes.$class("col-md-12")]),
-                                        _U.list([A2($Html.h1,_U.list([]),_U.list([$Html.text("Index")]))
+                                        _U.list([A2($Html.h1,_U.list([$Html$Attributes.$class("title")]),_U.list([$Html.text("Index")]))
                                                 ,A2($Html.ul,
                                                 _U.list([]),
                                                 _U.list([A2($Html.li,_U.list([]),_U.list([$Html.text("Why Elm?")]))
@@ -10393,9 +10393,13 @@ Elm.Main.make = function (_elm) {
    var update = F2(function (action,model) {
       var _p0 = action;
       if (_p0.ctor === "Next") {
-            return _U.update(model,{previousSlide: model.currentSlide,currentSlide: model.currentSlide + 1});
+            var nextSlide = model.currentSlide + 1;
+            var disableNext = _U.eq(nextSlide + 1,model.numberOfSlides) ? true : false;
+            return _U.update(model,{previousSlide: model.currentSlide,currentSlide: nextSlide,disableNext: disableNext,disableBack: false});
          } else {
-            return _U.update(model,{previousSlide: model.currentSlide,currentSlide: model.currentSlide - 1});
+            var previousSlide$ = model.currentSlide - 1;
+            var disableBack = _U.eq(previousSlide$,0) ? true : false;
+            return _U.update(model,{previousSlide: model.currentSlide,currentSlide: previousSlide$,disableNext: false,disableBack: disableBack});
          }
    });
    var Back = {ctor: "Back"};
@@ -10406,14 +10410,19 @@ Elm.Main.make = function (_elm) {
       _U.list([]),
       _U.list([A2($Html.main$,_U.list([$Html$Attributes.$class("container slides")]),_U.list([A2($Slides.getSlide,model.currentSlide,model.slides)]))
               ,A2($Html.button,
-              _U.list([A2($Html$Events.onClick,address,Back),$Html$Attributes.$class("btn btn-default btn-back")]),
+              _U.list([A2($Html$Events.onClick,address,Back),$Html$Attributes.$class("btn btn-default btn-back"),$Html$Attributes.disabled(model.disableBack)]),
               _U.list([$Html.text("Back")]))
               ,A2($Html.button,
-              _U.list([A2($Html$Events.onClick,address,Next),$Html$Attributes.$class("btn btn-default btn-next")]),
+              _U.list([A2($Html$Events.onClick,address,Next),$Html$Attributes.$class("btn btn-default btn-next"),$Html$Attributes.disabled(model.disableNext)]),
               _U.list([$Html.text("Next")]))]));
    });
-   var initalModel = {slides: $Slides.slides,currentSlide: 0,previousSlide: 0};
+   var initalModel = {slides: $Slides.slides
+                     ,currentSlide: 0
+                     ,previousSlide: 0
+                     ,disableBack: true
+                     ,disableNext: false
+                     ,numberOfSlides: $Array.length($Slides.slides)};
    var main = $StartApp$Simple.start({model: initalModel,view: view,update: update});
-   var Model = F3(function (a,b,c) {    return {slides: a,currentSlide: b,previousSlide: c};});
+   var Model = F6(function (a,b,c,d,e,f) {    return {slides: a,currentSlide: b,previousSlide: c,disableBack: d,disableNext: e,numberOfSlides: f};});
    return _elm.Main.values = {_op: _op,Model: Model,initalModel: initalModel,Next: Next,Back: Back,update: update,view: view,main: main};
 };

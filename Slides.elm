@@ -43,7 +43,9 @@ slides =
             ( slideBasicTemplate
                 "slide-1"
                 ( section [ class "col-md-12" ]
-                    [ h1 [] [ text "Index" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "Index" ]
                     , ul [] 
                         [ li [] [ text "Why Elm?" ]  -- Explain Evan's slides and the history of programming from js' point of view
                         , li [] [ text "What is Elm?" ] -- Explain the iphone comparison 

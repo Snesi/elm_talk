@@ -14,6 +14,9 @@ type alias Model =
     { slides : Array Slides.Slide
     , currentSlide : Int
     , previousSlide : Int
+    , disableBack : Bool
+    , disableNext : Bool
+    , numberOfSlides : Int
     }
     
     
@@ -22,6 +25,9 @@ initalModel =
     { slides = Slides.slides
     , currentSlide = 0
     , previousSlide = 0
+    , disableBack = True
+    , disableNext = False
+    , numberOfSlides = length Slides.slides
     }
 
 
@@ -31,19 +37,32 @@ type Action
     | Back
 
 
+
 update : Action -> Model -> Model
 update action model = 
     case action of
         Next ->
-            { model | previousSlide = model.currentSlide 
-            , currentSlide = model.currentSlide + 1
-            }
+            let
+                nextSlide = model.currentSlide + 1
+                disableNext = if nextSlide + 1 == model.numberOfSlides then True else False
+            in
+                { model | previousSlide = model.currentSlide 
+                , currentSlide = nextSlide
+                , disableNext = disableNext
+                , disableBack = False
+                }
         Back ->
-            { model | previousSlide = model.currentSlide 
-            , currentSlide = model.currentSlide - 1
-            }
-    
-    
+            let
+                previousSlide' = model.currentSlide - 1
+                disableBack = if previousSlide' == 0 then True else False
+            in
+                { model | previousSlide = model.currentSlide 
+                , currentSlide = previousSlide'
+                , disableNext = False
+                , disableBack = disableBack
+                }    
+
+
 -- VIEW
 view : Address Action -> Model -> Html
 view address model =
@@ -57,11 +76,13 @@ view address model =
         , button 
             [ onClick address Back
             , class "btn btn-default btn-back" 
+            , disabled model.disableBack
             ] 
             [ text "Back" ]
         , button 
             [ onClick address Next 
             , class "btn btn-default btn-next"
+            , disabled model.disableNext
             ] 
             [ text "Next" ]        
         ]

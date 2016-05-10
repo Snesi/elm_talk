@@ -4,6 +4,7 @@ html {
 
 body {
     min-height: 100%;
+    font-size: 200%;
 }
 .slides {
     position: absolute;
@@ -27,4 +28,16 @@ body {
 
 .main-title {
     text-align: center;
+    font-size: 3em;
+}
+
+.title {
+    font-size: 2.5em
+}
+
+.slides ul {
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    font-size: 1.2em;
 }
