@@ -6,6 +6,9 @@ body {
     min-height: 100%;
     font-size: 200%;
 }
+img {
+    max-height: 530px;
+}
 .slides {
     position: absolute;
     top: 50%;
