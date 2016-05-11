@@ -8037,7 +8037,7 @@ var _user$project$Slides$slides = _elm_lang$core$Array$fromList(
 										[]),
 									_elm_lang$core$Native_List.fromArray(
 										[
-											_elm_lang$html$Html$text('Phd in Asynchronous Functional Reactive Programming for GUIs')
+											_elm_lang$html$Html$text('Phd in Asynchronous Functional Programming for GUIs')
 										])),
 									A2(
 									_elm_lang$html$Html$li,
@@ -8705,7 +8705,7 @@ var _user$project$Slides$slides = _elm_lang$core$Array$fromList(
 								[]),
 							_elm_lang$core$Native_List.fromArray(
 								[
-									_elm_lang$html$Html$text('The StartApp module slowly teaches you the Elm Architecture')
+									_elm_lang$html$Html$text('The Html module slowly teaches you the Elm Architecture')
 								])),
 							A2(
 							_elm_lang$html$Html$h2,
@@ -8820,7 +8820,7 @@ var _user$project$Slides$slides = _elm_lang$core$Array$fromList(
 								[]),
 							_elm_lang$core$Native_List.fromArray(
 								[
-									_elm_lang$html$Html$text('a Functional Reactive Programming Language with:')
+									_elm_lang$html$Html$text('a Functional Programming Language with:')
 								])),
 							A2(
 							_elm_lang$html$Html$ul,

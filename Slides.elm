@@ -74,7 +74,7 @@ slides =
                         , src "img/evan_czaplicki.jpg"]
                         [ ]
                     , ul [] 
-                        [ li [] [ text "Phd in Asynchronous Functional Reactive Programming for GUIs" ]  
+                        [ li [] [ text "Phd in Asynchronous Functional Programming for GUIs" ]  
                         , li [] [ text "Creator of Elm" ]  
                         , li [] [ text "Worked at Prezi" ]
                         , li [] [ text "Works at NoRedInk" ] 
@@ -331,7 +331,7 @@ slides =
                         [ text "Gradual Learning" ]
                     , h2
                         [  ]
-                        [ text "The StartApp module slowly teaches you the Elm Architecture" ]
+                        [ text "The Html module slowly teaches you the Elm Architecture" ]
                     , h2
                         [  ]
                         [ text "Get ready for da code!" ]
@@ -368,7 +368,7 @@ slides =
                         [ text "What is Elm?" ]
                     , h2 
                         []
-                        [ text "a Functional Reactive Programming Language with:" ]
+                        [ text "a Functional Programming Language with:" ]
                     , ul [] 
                         [ li [] [ text "Virtual Dom (aka React.js)" ]
                         , li [] [ text "Unidirectional dataflow (aka Flux)" ] 
