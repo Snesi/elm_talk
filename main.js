@@ -7942,7 +7942,7 @@ var _user$project$Slides$slides = _elm_lang$core$Array$fromList(
 										[]),
 									_elm_lang$core$Native_List.fromArray(
 										[
-											_elm_lang$html$Html$text('Full Stack Dev')
+											_elm_lang$html$Html$text('Full Stack Dev @ GetFinancing')
 										])),
 									A2(
 									_elm_lang$html$Html$li,
@@ -8596,7 +8596,47 @@ var _user$project$Slides$slides = _elm_lang$core$Array$fromList(
 										[
 											{ctor: '_Tuple2', _0: 'margin', _1: '10px auto'}
 										])),
-									_elm_lang$html$Html_Attributes$src('img/maintainability_vs_usability.jpg')
+									_elm_lang$html$Html_Attributes$src('img/maintainability_vs_usability_1.jpg')
+								]),
+							_elm_lang$core$Native_List.fromArray(
+								[]))
+						])))),
+			A3(
+			_user$project$Slides$Slide,
+			'What\'s the future',
+			14,
+			A2(
+				_user$project$Slides$slideBasicTemplate,
+				'slide-2',
+				A2(
+					_elm_lang$html$Html$section,
+					_elm_lang$core$Native_List.fromArray(
+						[
+							_elm_lang$html$Html_Attributes$class('col-md-12')
+						]),
+					_elm_lang$core$Native_List.fromArray(
+						[
+							A2(
+							_elm_lang$html$Html$h1,
+							_elm_lang$core$Native_List.fromArray(
+								[
+									_elm_lang$html$Html_Attributes$class('title')
+								]),
+							_elm_lang$core$Native_List.fromArray(
+								[
+									_elm_lang$html$Html$text('What\'s the future?')
+								])),
+							A2(
+							_elm_lang$html$Html$img,
+							_elm_lang$core$Native_List.fromArray(
+								[
+									_elm_lang$html$Html_Attributes$class('img-responsive'),
+									_elm_lang$html$Html_Attributes$style(
+									_elm_lang$core$Native_List.fromArray(
+										[
+											{ctor: '_Tuple2', _0: 'margin', _1: '10px auto'}
+										])),
+									_elm_lang$html$Html_Attributes$src('img/maintainability_vs_usability_2.jpg')
 								]),
 							_elm_lang$core$Native_List.fromArray(
 								[]))

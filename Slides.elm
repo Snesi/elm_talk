@@ -49,7 +49,7 @@ slides =
                         [ class "title" ] 
                         [ text "About me" ]
                     , ul [] 
-                        [ li [] [ text "Full Stack Dev" ]  
+                        [ li [] [ text "Full Stack Dev @ GetFinancing" ]  
                         , li [] [ text "Not an Elm expert" ]  
                         , li [] [ text "Spanish-American" ]
                         , li [] [ text "Geek" ]
@@ -295,7 +295,25 @@ slides =
                     , img 
                         [ class "img-responsive" 
                         , style [ ("margin", "10px auto") ]
-                        , src "img/maintainability_vs_usability.jpg" 
+                        , src "img/maintainability_vs_usability_1.jpg" 
+                        ]
+                        [ ]
+                    ]
+                )
+            )
+        , Slide
+            "What's the future"
+            14
+            ( slideBasicTemplate
+                "slide-2"
+                ( section [ class "col-md-12" ]
+                    [ h1 
+                        [ class "title" ] 
+                        [ text "What's the future?" ]
+                    , img 
+                        [ class "img-responsive" 
+                        , style [ ("margin", "10px auto") ]
+                        , src "img/maintainability_vs_usability_2.jpg" 
                         ]
                         [ ]
                     ]
